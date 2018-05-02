@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试</title>
+</head>
+<body>
+	<div id="contentId">
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span>10</span>
+	</div>
+</body>
+<script type="text/javascript" src="waterfall.js"></script>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script >
+//模拟不同的高,把<div id="contentId">里的子节点赋予参差不齐的高度
+var contentchildren=$("#contentId").children();
+var itemCount=contentchildren.length;
+for (var j =0; j<itemCount; j++) {
+(contentchildren.eq(j)).css({"width":"200px","height":(100+Math.random()*300),"display":"block","background-color":"pink","border":"2px solid black"});
+}
+
+//调用方法加载
+putEasyWater("#contentId",3);
+//putSmartWater("#contentId",3);
+
+</script>
+</html>

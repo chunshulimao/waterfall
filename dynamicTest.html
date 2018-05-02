@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试</title>
+</head>
+<body>
+	<div id="contentId">
+	</div>
+</body>
+<script type="text/javascript" src="waterfall.js"></script>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script >
+		//创建10条模拟数据 分别动态添加
+		for (var j =0; j<10; j++) {
+			var myitem=document.createElement("span");
+			$(myitem).css({"width":"200px","height":(100+Math.random()*300),"display":"block","background-color":"pink","border":"2px solid black"});
+			myitem.innerText=j+"";
+
+			putDynamicWater("#contentId",3,myitem);//添加myitem到瀑布流
+			//putSmartDynamicWater("#contentId",3,myitem);//添加myitem到瀑布流
+
+		}
+	
+
+	</script>
+	</html>
