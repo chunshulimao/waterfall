@@ -1,4 +1,5 @@
 csdn地址:https://blog.csdn.net/abfdada/article/details/80175985
+
 用法:
 <h1>1 静态加载:将父节点中已有的子节点重新以瀑布流的形式横向加载
 	<h3> 1.1 每列依次加载一个子节点putEasyWater(瀑布流静态加载的父节点,加载成多少列)方法.
